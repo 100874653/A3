@@ -23,7 +23,7 @@ let mongoDB = mongoose.connection;
 let DB = require('./db');
 //mongoose.connect('mongodb://127.0.0.1:27017/BookLib');
 mongoose.connect(DB.URI);
-mongoDB.on('error',console.error.bind(console,'Connection Error by Jonathan'));
+mongoDB.on('error',console.error.bind(console,'Connection Error'));
 mongoDB.once('open',()=>{console.log("Mongo DB is connected")});
 //mongoose.connect(DB.URI);
 let indexRouter = require('../routes/index');
