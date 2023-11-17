@@ -46,7 +46,7 @@ module.exports.ProcessBook = async (req,res,next)=>{
             "Price": req.body.Price
         });
         Book.create(newBook).then(() =>{
-            res.redirect('/bookslist')
+            res.redirect('/Facebook')
         })
     }
     catch(error){
@@ -89,7 +89,7 @@ module.exports.ProcessEditBook = (req,res,next)=>{
             "Price": req.body.Price
         });
         Book.findByIdAndUpdate(id,updatedBook).then(()=>{
-            res.redirect('/bookslist')
+            res.redirect('/Facebook')
         });
     }
     catch(error){
@@ -106,7 +106,7 @@ module.exports.DeleteBook = (req,res,next)=>{
         let id = req.params.id;
         Book.deleteOne({_id:id}).then(() =>
         {
-            res.redirect('/bookslist')
+            res.redirect('/Facebook')
         })
     }
     catch(error){

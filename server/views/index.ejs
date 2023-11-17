@@ -3,9 +3,26 @@
 <main>
   <div class="jumbotran jumbotran-fluid">
     <div class="container">
-      <h1 class="display-4"> Welcome to the <%= title %></h1>
+      <h1 class="display-10 connect-text">Connect with people</h1>
     </div>
   </div>
 </main>
+<style>
+  /* Add this style block to your index.ejs file */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .connect-text {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+</style>
 <% include partials/bottom_nav.ejs %>
 <% include partials/footer.ejs %>
